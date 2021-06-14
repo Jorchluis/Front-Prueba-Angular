@@ -1,0 +1,43 @@
+<div class="container" >
+    <h3>Listado Vehiculos</h3>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+             <a class="nav-link active" aria-current="page" routerLink = "/add" href="#">Agregar</a>
+         </li>
+     </ul>
+ </div> 
+
+    <button  routerLink="/add" type="button" class="btn btn-dark">Agregar</button>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Placa</th>
+            <th scope="col">Año</th>
+            <th scope="col">Color</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let vehiculo of listado'>
+            <th> {{vehiculo.id}} </th>
+            <th> {{vehiculo.marca}} </th>
+            <th> {{vehiculo.placa}} </th>
+            <th> {{vehiculo.anio}} </th>
+            <th> {{vehiculo.color}} </th>
+            <th> 
+                <button (click)="updateVehiculo(vehiculo.id)" type="button" class="btn btn-primary">Editar</button>
+            </th>
+            <th> 
+                <button (click)="deleteVehiculo(vehiculo.id)" type="button" class="btn btn-danger" name="delete">Eliminar</button>
+            </th>
+          </tr>
+        </tbody>     
+      </table>
+</div>

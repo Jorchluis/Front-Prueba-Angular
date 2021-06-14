@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Modificar Registros</h2>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <form action="">
+                <div class="mb-3">
+                    <label class="form-label">Marca</label>
+                    <input [(ngModel)]="vehiculo.marca" type="text" class="form-control" name="marca">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Placa</label>
+                    <input [(ngModel)]="vehiculo.placa" type="text" class="form-control" name="placa">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Año</label>
+                    <input [(ngModel)]="vehiculo.anio" type="number" class="form-control" name="anio">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Color</label>
+                    <input [(ngModel)]="vehiculo.color" type="text" class="form-control" name="color">
+                </div>
+
+                <button (click)="modificar()" class="btn btn-primary" >Actualizar</button>
+            </form>
+        </div>
+        <div class="col-sm-6"></div>
+
+    </div>
+</div>
